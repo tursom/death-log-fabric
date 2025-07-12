@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "death-log-fabric",
+  "version": "${version}",
+  "name": "death-log-fabric",
+  "description": "Minecraft fabric server prometheus exporter",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/death-log-fabric/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "fabric-datagen": [
+    ],
+    "main": [
+      "cn.tursom.deathLogFabric.DeathLogFabric"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "deathlog.mixins.json",
+      "environment": "server"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
